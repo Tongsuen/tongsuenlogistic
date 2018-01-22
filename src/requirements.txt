@@ -1,4 +1,4 @@
-Ddj-database-url==0.4.2
+dj-database-url==0.4.2
 Django==2.0.1
 django-wkhtmltopdf==3.1.0
 gunicorn==19.7.1
