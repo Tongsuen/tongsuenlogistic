@@ -88,7 +88,7 @@ DATABASES = {
 }
 
 import dj_database_url
-db_from_env = dj_dabase_url.cofig() # postgreSQL
+db_from_env = dj_database_url.config() # postgreSQL
 DATABASES['default'].update(db_from_env)
 DATABASES['default']['CONN_MAX_AGE'] = 500
 # Password validation
