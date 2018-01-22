@@ -355,6 +355,9 @@ h5 {
 bootstrap custom
 
 */
+.single_input {
+  margin: 5px;
+}
 .dropdown-item:hover {
     background-color: rgba(241, 90, 34, 0.36);
 }

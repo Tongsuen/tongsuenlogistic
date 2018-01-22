@@ -15,7 +15,7 @@ html,body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    overflow: auto;
 }
 
 
@@ -51,7 +51,7 @@ footer {
 }
 
 .navigation-ts {
-    position: fixed; /*absolute*/
+    position: absolute; /*fixed*/
     background-color: black;
     height: 54px;
     width: 90%;
@@ -72,21 +72,22 @@ footer {
 .menu-button {
     font-size: 60%;
     padding-top: 15px;
-    color:white
+    color:white;
+    cursor: pointer;
 }
 
 .menu-button-active {
     font-size: 60%;
     padding-top: 15px;
-    color:white;
-    border-bottom: 3px solid #F15A24;
+    color:#F15A24;
     height: 100%;
     transition: all 0.3s ease-out;
 }
 .language-botton {
     font-size: 60%;
-    padding-top: 15px;
+    padding-top: 12px;
     color:white;
+    cursor: pointer;
 }
 
 .service {
@@ -311,6 +312,7 @@ h5 {
 .service-box {
     height: 280px;
     padding: 5px;
+    cursor: pointer;
 }
 .img-service-box {
     height: 60%;
@@ -355,6 +357,9 @@ h5 {
 bootstrap custom
 
 */
+.single_input {
+  margin: 5px;
+}
 .dropdown-item:hover {
     background-color: rgba(241, 90, 34, 0.36);
 }
@@ -373,7 +378,7 @@ bootstrap custom
 .liitle-slide img{
     width:100%;
     height: 100%;
-    padding: 30px;
+    padding-top: 30px;
 
     object-fit: cover;
 }
@@ -390,6 +395,7 @@ icon
     height: 20px;
     width: 20px;
     margin: 0px auto;
+    object-fit: contain;
 }
 .icon-socail-3 {
     width: 45px;
@@ -397,6 +403,7 @@ icon
     padding-bottom: 20px;
     padding-top: 30px;
     object-fit: contain;
+    cursor: pointer;
 }
 .icon-socail-2 {
     width: 55px;
@@ -404,12 +411,14 @@ icon
     padding-bottom: 20px;
     padding-top: 20px;
     object-fit: contain;
+    cursor: pointer;
 }
 .icon-socail {
     width: 65px;
     height: auto;
     padding-top: 20px;
      object-fit: scale-down;
+     cursor: pointer;
 }
 .gly-rotate-45 {
   filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
@@ -540,11 +549,11 @@ button
     width: 30%;
     display: inline-block;
     padding: 10px 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     text-align: center;
     color: #F15A24;
     border-radius: 10px;
-
+    cursor: pointer;
     transition: background-color 0.2s;
 }
 

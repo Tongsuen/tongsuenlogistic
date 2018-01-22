@@ -24,9 +24,9 @@
                         <img src='{% static "resource/img/tongsuen_logo.svg" %}' class="logo">
                     </div>
                     <div class="menu-list col-md-8 col-sm-8 col-12 row">
-                        <div class="col-sm-0 col-md-3">
+                        <div class="col-sm-0 col-md-0 col-lg-3">
                         </div>
-                        <div id="home-link" class="menu-button-active col-sm-3 col-md-2 col-3">
+                        <div id="home-link" class="menu-button-active col-sm-3 col-md-3 col-3 col-lg-2">
                            <p class="text-sm-center">
                              {% if lang == "th" %}
                               หน้าหลัก
@@ -37,7 +37,7 @@
                              {% endif %}
                             </p>
                         </div>
-                        <div id="about-link" class="menu-button col-sm-3 col-md-2 col-3">
+                        <div id="about-link" class="menu-button col-sm-3 col-md-3 col-3 col-lg-2">
                            <p class="text-sm-center">
 
                              {% if lang == "th" %}
@@ -49,7 +49,7 @@
                              {% endif %}
                            </p>
                         </div>
-                        <div id="service-link" class="menu-button  col-sm-3 col-md-2 col-3">
+                        <div id="service-link" class="menu-button  col-sm-3 col-md-3 col-3 col-lg-2">
                            <p class="text-sm-center">
                              {% if lang == "th" %}
                               บริการ
@@ -60,7 +60,7 @@
                              {% endif %}
                             </p>
                         </div>
-                        <div id="contact-link" class="menu-button col-sm-3 col-md-2 col-3">
+                        <div id="contact-link" class="menu-button col-sm-3 col-md-3 col-3  col-lg-2">
                            <p class="text-sm-center">
 
                              {% if lang == "th" %}
@@ -76,13 +76,13 @@
                     <div class="col-md-2 col-sm-1 col-12 language-botton" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                           {% if lang == "th" %}
-                          ภาษา
+                            <div class="text-language ">ภาษา</div>
                             <img class="lang-icon-2" src='{% static "resource/img/th-01_400px.png" %}' alt="First slide">
                           {% elif lang == "en" %}
-                          Languages
+                          <div class="text-language">  Languages </div>
                             <img class="lang-icon-2" src='{% static "resource/img/us-01_400px.png" %}' alt="First slide">
                           {% elif lang == "cn" %}
-                          语言选择
+                            <div class="text-language">  语言选择 </div>
                             <img class="lang-icon-2" src='{% static "resource/img/ch-01_400px.png" %}' alt="First slide">
                           {% endif %}
                     </div>
@@ -247,9 +247,9 @@
                               电话
                              {% endif %}
                             </label>
-                            <input type="text" class="form-control" id="inputtel_office" name="tel_office" placeholder="office number">
-                            <input type="text" class="form-control" id="inputtel_mobile" name="tel_mobile" placeholder="mobile number">
-                            <input type="text" class="form-control" id="inputtel_fax" name="tel_fax" placeholder="fax number">
+                            <input type="text" class="form-control single_input" id="inputtel_office" name="tel_office" placeholder="office number">
+                            <input type="text" class="form-control single_input" id="inputtel_mobile" name="tel_mobile" placeholder="mobile number">
+                            <input type="text" class="form-control single_input" id="inputtel_fax" name="tel_fax" placeholder="fax number">
 
                           </div>
                           <div class="form-group col-md-12">
@@ -336,10 +336,31 @@
 
                         <img class="Responsive service-image" src='{% static "resource/img/about-us-1.jpg" %}' alt="Third slide">
 
-                        <p class="color-text-service-box text-center">Warehouse</p>
-                        <p class="text-service-detail text-center">
-                           We provide warehouse rental for all type of products such as product packaging, general cargo and etc. With supporting teams that will help users run their activities effectively.
+                        <p class="color-text-service-box text-center">
+                          {% if lang == "th" %}
+                          คลังสินค้า
+                          </p>
+                          <p class="text-service-detail text-center">
+                            สำหรับการเริ่มต้นขายของออนไลน์บ้านของคุณจะ
+                                 ไม่ใช่ที่เก็บสินค้าอีกต่อไปให้เราจัดการสินค้า
+                                       และสต๊อกคงเหลือให้แล้วบ้านจะกลับมาเป็นบ้านอีกครั้ง
+                          </p>
+                        {% elif lang == "en" %}
+                        Warehouse
                         </p>
+                        <p class="text-service-detail text-center">
+                          We provide warehouse rental
+                                 For all type of product with supporting
+                          Teams that will help users run their activities effectively
+                        </p>
+                        {% elif lang == "cn" %}
+                        仓库
+                        </p>
+                        <p class="text-service-detail text-center">
+                          我司提供针对各种货物的仓库租赁服务，
+                          提供的团队管理使客户对于货物的存储和运作更便利
+                        </p>
+                        {% endif %}
                     </div>
 
                 </div>
@@ -349,10 +370,33 @@
 
                         <img class="Responsive service-image" src='{% static "resource/img/about-us-2.jpg" %}' alt="Third slide">
 
-                        <p class="color-text-service-box text-center">Transportation</p>
-                        <p class="text-service-detail text-center">
-                          Transportation to various locations Or ports of international importance. And distribution services and delivery Domestics Express. Delivery Main Line in Thailand: Ayutthaya, Sara Buri, Lop Buri, Sing Buri, Ang-Thong.
+                        <p class="color-text-service-box text-center">
+                          {% if lang == "th" %}
+                            ขนส่ง
+                          </p>
+                          <p class="text-service-detail text-center">
+                            รองรับการจัดส่งพัสดุของธุรกิจ SME เหมาะ
+                                   กับสินค้าออนไลน์ ส่งด่วน ส่งไว
+                                  สินค้าของคุณคือทรัพย์สินของเรา
+                          </p>
+                        {% elif lang == "en" %}
+                        Transport
                         </p>
+                        <p class="text-service-detail text-center">
+
+                                  We provide 24 hour inland Transport
+                             GPS supported with insurance all along the route
+                           For every type of product and every need for customer.
+                        </p>
+                        {% elif lang == "cn" %}
+                          运输
+                        </p>
+                        <p class="text-service-detail text-center">
+                          我司提供24小时的内陆运输服务。
+                          整个运输行程兼备GPS监控以及运输托保。
+                          针对于任何类型的物品，服务于任何需要的你。
+                        </p>
+                        {% endif %}
                     </div>
                 </div>
 
@@ -361,10 +405,34 @@
 
                         <img class="Responsive service-image" src='{% static "resource/img/about-us-3.jpg" %}' alt="Third slide">
 
-                        <p class="color-text-service-box text-center">Flight (Import-Export)</p>
-                        <p class="text-service-detail text-center">
-                           We can provide Rate Freight both by air and by boat. We choose the best price for you.
+                        <p class="color-text-service-box text-center">
+                          {% if lang == "th" %}
+                          Freight
+                          </p>
+                          <p class="text-service-detail text-center">
+                            ให้บริการด้านพิธีการกรมศุลกากรและเป็นตัวแทนในการออกสินค้า
+          รวมถึงจัดเตรียมเอกสารและให้คำแนะนำในการนำเข้า-ส่งออก
+           โดยจัดหาค่าระวางการขนส่งสินค้าทางทะเล รวมถึงการขนส่งทาง
+      อากาศที่เหมาะกับการขนส่งที่ต้องการความรวดเร็วและจำกัดระยะเวลา
+                          </p>
+                        {% elif lang == "en" %}
+                        Freight
                         </p>
+                        <p class="text-service-detail text-center">
+                          We offer the best capacity, schedule and competitive rates.
+                    Whether general cargo, hazardous cargo,
+      out of gauge freight, standard shipment or consolidation services.
+                        </p>
+                        {% elif lang == "cn" %}
+                        运输费用
+                        </p>
+                        <p class="text-service-detail text-center">
+                          我们秉承着提供最好能力，最优进度和最强竞争力。
+无论是针对于一般货物，或其它货物。
+予以实际的价格，合格的运输，和稳当的服务。
+                        </p>
+                        {% endif %}
+
                     </div>
                 </div>
 
@@ -373,10 +441,29 @@
 
                         <img class="Responsive service-image" src='{% static "resource/img/about-us-4.jpg" %}' alt="Third slide">
 
-                        <p class="color-text-service-box text-center">Cross border</p>
-                        <p class="text-service-detail text-center">
-                           We can provide Rate Freight both by air and by boat. We choose the best price for you.
+                        <p class="color-text-service-box text-center">
+                          {% if lang == "th" %}
+                          ขนส่งผ่านแดน
+                          </p>
+                          <p class="text-service-detail text-center">
+                            จัดการขนส่งสินค้าข้ามแดนไปยังประเทศเพื่อนบ้านเช่น ประเทศลาว จีน
+                      และประเทศพม่า ด้วยความ ฉับไว ปลอดภัย และทันเวลา
+                         อีกทั้งราคาที่รับได้เพื่อสร้างความพึงพอใจให้กับลูกค้า
+                          </p>
+                        {% elif lang == "en" %}
+                        Cross border
                         </p>
+                        <p class="text-service-detail text-center">
+                          We offer transport service across CLMV countries
+Whether full truck load or less than truck load and Transit Shipment
+                        </p>
+                        {% elif lang == "cn" %}
+
+                        </p>
+                        <p class="text-service-detail text-center">
+
+                        </p>
+                        {% endif %}
                     </div>
                 </div>
 
@@ -545,18 +632,18 @@
   crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-
         <script >
             $(document).ready(function() {
+
                 $("#about-link").click(function() {
                     //Do stuff when clicked
                     self.removeHover()
                     $(this).removeClass("menu-button")
                     $(this).addClass("menu-button-active")
-
+                    console.log($("#about-section").offset().top);
                     $('html,body').animate({
-                       scrollTop: $("#about-section").position().top
-                    });
+                       scrollTop: $("#about-section").offset().top
+                    }, 500);
                     return false;
                 });
                 $("#service-link").click(function() {
@@ -564,10 +651,10 @@
                     self.removeHover()
                     $(this).removeClass("menu-button")
                     $(this).addClass("menu-button-active")
-
+                    console.log($("#service-section").offset().top);
                     $('html,body').animate({
-                       scrollTop: $("#service-section").position().top
-                    });
+                       scrollTop: $("#service-section").offset().top
+                    }, 500);
                     return false;
                 });
                 $("#contact-link").click(function() {
@@ -575,21 +662,21 @@
                     self.removeHover()
                     $(this).removeClass("menu-button")
                     $(this).addClass("menu-button-active")
-
+                    console.log($("#contact-section").offset().top);
                     $('html,body').animate({
-                       scrollTop: $("#contact-section").position().top
-                    });
+                       scrollTop: $("#contact-section").offset().top
+                    }, 500);
                     return false;
                 });
                 $("#home-link").click(function() {
-                    //Do stuff when clicked
-                    self.removeHover()
-                    $(this).removeClass("menu-button")
-                    $(this).addClass("menu-button-active")
 
+                  self.removeHover()
+                  $(this).removeClass("menu-button")
+                  $(this).addClass("menu-button-active")
+                  console.log($("#header-section").offset().top);
                     $('html,body').animate({
-                       scrollTop: $("#header-section").position().top
-                    });
+                       scrollTop: $("#header-section").offset().top
+                      }, 500)
                     return false;
                 });
 
